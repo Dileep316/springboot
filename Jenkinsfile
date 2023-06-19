@@ -1,14 +1,11 @@
 pipeline {
     agent any 
-    tools {
-        maven "3.9.2"
-    
-    }
+ 
     stages {
         stage('Compile and Clean') { 
             steps {
                 // Run Maven on a Unix agent.
-              
+                sh 'ls'
                 sh "mvn clean compile"
             }
         }
